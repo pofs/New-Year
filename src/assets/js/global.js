@@ -186,6 +186,9 @@ function opentabs4(e) {
         }
     })
 
+    var el = '#style-decor';
+    var top = $(el).offset().top;
+    $('body,html').animate({scrollTop: top}, 1500);
     return false;
 
 }

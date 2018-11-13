@@ -66,7 +66,7 @@ block main
         .b-video__inner
             .b-video-data
                 .b-video-data__inner
-                    .b-video-data__title Просмотрите видео <br> «Письмо от деда Мороза»
+                    //.b-video-data__title Просмотрите видео <br> «Письмо от деда Мороза»
                     a(data-fancybox-type="iframe" href="https://www.youtube.com/embed/6RGDnQIJvRk?iframe&frameborder=0").b-video-data__play
     section.section.action
         .action__img.action__img--rb1
@@ -158,15 +158,15 @@ block main
                     .page-f-decor__item
                         .text-oform
                             .text-oform__item
-                                a.text-oform__images(rel="group" title="описание" href="images/step3/11.jpg")
+                                a.text-oform__images(rel="group" title="Текст №1" href="images/step3/11.jpg")
                                     img(src="images/style-text_2.jpg", alt="content")
                                 .text-oform__name Текст №1
                             .text-oform__item
-                                a.text-oform__images(rel="group" title="описание" href="images/step3/12.jpg")
+                                a.text-oform__images(rel="group" title="Текст №2" href="images/step3/12.jpg")
                                     img(src="images/style-text_2.jpg", alt="content")
                                 .text-oform__name Текст №2
                             .text-oform__item
-                                a.text-oform__images(rel="group" title="описание" href="images/step3/13.jpg")
+                                a.text-oform__images(rel="group" title="Текст №3" href="images/step3/13.jpg")
                                     img(src="images/style-text_2.jpg", alt="content")
                                 .text-oform__name Текст №3
                         .btn-inner
@@ -206,7 +206,7 @@ block main
                                             .btn-inner.btn-inner--left
                                                     input(class='ordering-form__check' type='checkbox', id='check2')
                                                     label(for="check2").ordering-form__check-label
-                                                       | Отправить первым классом с трек номером <strong> +1,5 руб. </strong>
+                                                       | Отправить 1 классом с трек номером <strong> +1,5 руб. </strong>
                                                        i.helper.helper--dark(data-content="Описание появляющееся по наведению") ?
                                         .ordering-form__row
                                             .ordering-form__name Как с вами связаться
@@ -220,17 +220,13 @@ block main
                                                 .ordering-form__group.ordering-form__group--textarea
                                                     label.ordering-form__label.ordering-form__label--required Комментарий:
                                                     textarea(placeholder="Введите комментраий к письму").ordering-form__textarea
-                                    .ordering-footer.sm-hidden
+                                    .ordering-footer.ordering-footer--no-pt.sm-hidden
                                         .ordering-footer__inner
-                                            .ordering-footer__row
-                                                | После того, как Вы нажмете “Оплатить”, сайт перенаправит Вас на
-                                                img(src="images/pay8.png", alt='расчет').ordering-footer__img
-                                                img(src="images/pay9.png", alt='assist').ordering-footer__img
                                             .ordering-footer__row В случае возникновения трудностей с оформлением заказа наберите: <br> <a class='ordering__help-tel' href='tel:+375298882019'>‎ +375 (29) 888-2019</a>
                                 .grid__cell
                                     .ordering__info.info-ordering
                                         .info-ordering__name Ваше поздравление
-                                        a(title="описание" href="images/card-pozdrav.png").info-ordering__images
+                                        a(title="Ваше поздравление" href="images/card-pozdrav.png").info-ordering__images
                                             img(src='./images/card-pozdrav.png')
                                     .full-data
                                         .full-data__info
@@ -253,68 +249,113 @@ block main
                                         .nominal-certificate__check-group
                                             input(class='nominal-certificate__check js--i-agree' type='checkbox' checked, id='check3')
                                             label(for="check3").nominal-certificate__check-label Я согласен с
-                                                a(href="#").nominal-certificate__link-offert условиями оферты
-                                                span.helper.helper--dark(data-content="Описание появляющееся по наведению") ?
+                                                a(href="publichnaya-oferta-pismo-deda.by.docx").nominal-certificate__link-offert условиями оферты
                                         input(type="submit" value="Оплатить").btn.btn--ordering.btn--form
-                                    .ordering-footer.sm-visible
+                                    .ordering-footer
                                         .ordering-footer__inner
-                                            .ordering-footer__row
-                                                | После того, как Вы нажмете “Оплатить”, сайт перенаправит Вас на
-                                                img(src="images/pay8.png", alt='расчет').ordering-footer__img
+                                            .ordering-footer__row.ordering-footer__row--center
+                                                div Вы будете перенаправлены на
                                                 img(src="images/pay9.png", alt='assist').ordering-footer__img
-                                            .ordering-footer__row В случае возникновения трудностей с оформлением заказа наберите: <br> <a class='ordering__help-tel' href='tel:+375298882019'>‎ +375 (29) 888-2019</a>
-
-
-
+                                                img(src="images/pay8.png", alt='расчет').ordering-footer__img
+                                            .ordering-footer__row.sm-visible В случае возникновения трудностей с оформлением заказа наберите: <br> <a class='ordering__help-tel' href='tel:+375298882019'>‎ +375 (29) 888-2019</a>
     section.section.section--white.information
         .box
-            .hr-heading
             .heading
                 span Поздравление от деда мороза это
             .information__inner
                 .information__item
-                    .information__images(data-popup="popup_info", data-modal-text='<span>Новый год — это время, когда хочется верить в чудеса, загадывать желания и, конечно, дарить и получать подарки! И мы постараемся доставить в каждый дом, наш оригинальный подарок. В создании письма и конверта, мы использовали наилучшие материалы (бумага хорошей плотности, высококачественная печать, оригинальный дизайн). Единственный в Беларуси, интернет-магазин Письма от Деда Мороза online.</span>')
+                    .information__images(data-popup='popup_info', data-modal-text='<span>Новый год — это время, когда хочется верить в чудеса, загадывать желания и, конечно, дарить и получать подарки!<br>И мы постараемся доставить в каждый дом, наш оригинальный подарок.     В создании письма и конверта, мы использовали наилучшие материалы (бумага хорошей плотности, высококачественная печать, оригинальный дизайн).      А также, каждому получателю мы подарим набор новогодних стикеров.     Единственный в Беларуси, интернет-магазин Письма от Деда Мороза online.</span>')
                         img(src='./images/info-item1.png')
-                    .information__name.
-                        Уникальный сервис Новогоднего
-                        Поздравления В Республике Беларусь
+                    .information__name
+                        | Уникальный сервис Новогоднего Поздравления
                 .information__item
-                    .information__images(data-popup="popup_info", data-modal-text='<span>Оплата производится при помощи провайдера электронных платежей ASSIST – это мультибанковская система приема платежей по банковским картам через интернет, позволяющая в реальном времени производить авторизацию и обработку электронных платежей. В Беларуси компания подключает интернет-магазины и сервисы к приему платежей по банковским картам онлайн, а также к оплатам на сайте через систему АИС «Расчет» («ЕРИП»). С помощью Assist Belarus покупатели могут расплачиваться на сайтах картами платежных систем карт VISA, MasterCard, American Express, БЕЛКАРТ.</span>')
+                    .information__images(data-popup='popup_info', data-modal-text='<span>\
+                        Оплатить можно двумя способами: <br>\
+                        1.Банковской картой Visa, MasterCard,БЕЛКАРТ<br>\
+                        на нашем сайте при помощи провайдера электронных платежей ASSIST «belassist.by».<br>\
+                        2.Через систему ЕРИП:<br>\
+                        1. Выбрать<br>\
+                        •	Система Расчет (ЕРИП)</li><br>\
+                        •	«Прочие платежи»</li><br>\
+                        •	«Товары, работы и услуги»</li><br>\
+                        •	«Минск»</li><br>\
+                        •	«ИП Козак В.И.»</li><br>\
+                        •	«Оплата товара»</li><br>\
+                        •   Ввести Номер заказа.</li><br></span>')
                         img(src='./images/info-item2.png')
-                    .information__name.
-                        Удобный способ оплаты
+                    .information__name
+                        | Оплата онлайн на сайте
                 .information__item
-                    .information__images(data-popup="popup_info", data-modal-text='<span> Тестовый текст </span>' )
+                    .information__images(data-popup='popup_info', data-modal-text='<span> Все письма будут доставлены в канун нового года, с 1 декабря по 31декабря, ведь получить письмо от деда мороза перед самым новым годом- это так по новогоднему волшебно. Уделите внимание сейчас, наслаждайтесь радостью своих близких в канун нового года! </span>')
                         img(src='./images/info-item3.png')
-                    .information__name.
-                        Все письма будут доставлены в период
-                        с 22 по 31 Декабря 2017 года
+                    .information__name
+                        | Все письма будут доставлены до 31 декабря 2018 года
                 .information__item
-                    .information__images(data-popup="popup_info", data-modal-text='<span>  Тестовый текст </span> ' )
+                    .information__images(data-popup='popup_info', data-modal-text='<span>  Пользуясь услугами Белпочты, мы уверены, что письмо будет доставлено в любую точку Республики Беларусь. Каждое письмо будет доставлено почтальоном в почтовый ящик. Только представьте какие эмоции испытает получатель, когда он сам из почтового ящика достанет Письмо от Деда Мороза, адресованное ему лично! </span> ')
                         img(src='./images/info-item4.png')
-                    .information__name.
-                        Доставка в любую точку Беларуси,
-                        в почтовый ящик
+                    .information__name
+                        | Доставка в любую точку Беларуси, в почтовый ящик
                 .information__item
-                    .information__images(data-popup="popup_info", data-modal-text='<span>  Тестовый текст </span> ' )
+                    .information__images(data-popup='popup_info', data-modal-text='<span>\
+                        <ul>\
+                        <li>Именное письмо адресованное получателю!</li>\
+                        <li>Новогодний красочный конверт!</li>\
+                        <li>Набор новогодних стикеров!</li>\
+                        <li>Бесплатная доставка до почтового ящика!</li>\
+                        <li>Новогоднее настроение для своих близких!</li>\
+                        </ul>\
+                        </span>')
                         img(src='./images/info-item5.png')
-                    .information__name.
-                        Стоимость всего 9.95 руб.
+                    .information__name Стоимость до 31 ноября всего 9.95 руб.
+
+    section.caunt-users.soc_block
+        .box.box-soc
+            .caunt-users__inner
+                .caunt-users__header.soc_block_header
+                    .soc_block_title
+                        | Мы в социальных сетях:
+                    .soc_block_div
+                        a(href='https://www.instagram.com/pismo_deda.by/', target='_blank').soc_block__link
+                            img.soc_img(src='/images/inst.png', alt='soc')
+                        a(href='https://vk.com/pismodedaby', target='_blank').soc_block__link
+                            img.soc_img(src='/images/vk.png', alt='soc')
+                        a(href='https://ok.ru/group/53966047543363', target='_blank').soc_block__link
+                            img.soc_img(src='/images/ok.png', alt='soc')
+                        a(href='https://www.facebook.com/pismo-dedaby-354312878310116/', target='_blank').soc_block__link
+                            img.soc_img(src='/images/f.png', alt='soc')
+    section.section.section--white.information
+        .box
             .gallery
                 .gallery__header Галерея
                 .gallery__inner.owl-carousel
-                    .gallery__item(style= "background-image: url('./images/card-for-newYear.jpg');")
-                    .gallery__item(style= "background-image: url('./images/card-for-newYear.jpg');")
-                    .gallery__item(style= "background-image: url('./images/card-for-newYear.jpg');")
-                    .gallery__item(style= "background-image: url('./images/card-for-newYear.jpg');")
-                    .gallery__item(style= "background-image: url('./images/card-for-newYear.jpg');")
+                    a.gallery__item(style="background-image: url('./images/slider/IMG_1763.jpg');", href='images/slider/IMG_1763.jpg')
+                    a.gallery__item(style="background-image: url('./images/slider/IMG_1784.jpg');", href='images/slider/IMG_1784.jpg')
+                    a.gallery__item(style="background-image: url('./images/slider/IMG_1795.jpg');", href='images/slider/IMG_1795.jpg')
+                    a.gallery__item(style="background-image: url('./images/slider/IMG_1804.jpg');", href='images/slider/IMG_1804.jpg')
+                    a.gallery__item(style="background-image: url('./images/slider/IMG_1839.jpg');", href='images/slider/IMG_1839.jpg')
+                    a.gallery__item(style="background-image: url('./images/slider/IMG_1808.jpg');", href='images/slider/IMG_1808.jpg')
+                    a.gallery__item(style="background-image: url('./images/slider/IMG_1812.jpg');", href='images/slider/IMG_1812.jpg')
+                    a.gallery__item(style="background-image: url('./images/slider/IMG_1822.jpg');", href='images/slider/IMG_1822.jpg')
             .btn-inner
-                a(href="#style-decor").btn
-                    span Заказать за <span class="cost-btn"> 9.95 </span> руб.
+                a.btn(href='#style-decor')
+                    span(style='white-space: nowrap;')
+                        | Заказать за
+                        span.cost-btn-line  14.95
+                        span.cost-btn  9.95
+                        | р.
+            br
+            .information__images.dstv-header(data-popup='popup_info', data-modal-text='<span>  Доставка писем производится по всей Беларуси!\
+        Получатель сможет ЛИЧНО достать из почтового ящика письмо от Деда Мороза с новогодним сувениром, который мы подготовим специально для него!\
+        Это гарантированно поднимет предновогоднее настроение не только получателю, но и всей семье!\
+        Подарите своим близким незабываемые впечатления! </span> ')
+                | Бесплатная доставка по Беларуси
+
     section.caunt-users
         .box
             .caunt-users__inner
-                .caunt-users__images
-                    img(src='./images/child.png')
-                .caunt-users__header Уже <span class="shapka-count"> 1300 </span> счастливых получателей!
+                .caunt-users__header
+                    | Уже
+                    span.shapka-count  1896
+                    |  счастливых получателей!
+
 

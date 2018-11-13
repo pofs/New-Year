@@ -304,6 +304,7 @@
   overflow: hidden;
   cursor: pointer;
   background-image: linear-gradient(to bottom, #ffa100 0%, #ff7400 100%);
+  z-index: 10;
 
   span {
     position: relative;
@@ -743,10 +744,6 @@
 
 }
 
-.caunt-users {
-  background: url("../images/caunt-bg.jpg");
-  background-size: cover;
-}
 
 @keyframes snow {
   0% {
@@ -956,11 +953,14 @@
 }
 
 .caunt-users {
+  background: url("../images/caunt-bg.jpg");
+  background-size: cover;
 
   &__inner {
     display: flex;
     //flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
 
     @media screen and (max-width: 767px) {
       align-items: center;
@@ -1368,6 +1368,7 @@
       padding: 7px 15px;
       justify-content: flex-start;
       border-bottom: 2px solid #fff;
+      border-left: 0;
     }
 
     &:first-child {
@@ -2085,6 +2086,7 @@
 }
 
 .ordering-footer {
+  padding-top: 25px;
 
   @media screen and (max-width: 991px) {
     text-align: center;
@@ -2092,12 +2094,16 @@
   }
 
   &__row {
-    font-size: 14px;
-    font-weight: 600;
+    font-size: 16px;
+    font-weight: 500;
     color: #324661;
 
     &:not(:last-child) {
       padding-bottom: 35px;
+    }
+
+    &--center {
+      text-align: center;
     }
   }
 
@@ -2105,6 +2111,10 @@
     display: inline-block;
     margin: 0 10px;
     transform: translateY(25%);
+  }
+
+  &--no-pt {
+    padding-top: 0;
   }
 }
 
@@ -2170,6 +2180,10 @@
       text-decoration: none;
     }
 
+    @media (min-width: 992px) and (max-width: 1199px) {
+      font-size: 16px;
+    }
+
     @media screen and (max-width: 767px) {
       padding-right: 0;
       margin-bottom: 30px;
@@ -2222,6 +2236,10 @@
     margin-bottom: 20px;
     display: inline-block;
     text-align: left;
+
+    @media (min-width: 992px) and (max-width: 1199px) {
+      font-size: 16px;
+    }
 
     .helper {
       position: absolute;
@@ -2349,22 +2367,37 @@
   width: 60px;
 }
 
-.soc_block_div {
-  position: relative;
-  display: inline;
-  padding-left: 5%;
-  float: none;
-}
+.soc_block {
 
-.soc_block_div_title {
-  padding-top: 13px;
-  position: relative;
-  display: inline-block;
-  float: left;
+  &_div {
+    position: relative;
+    padding-left: 5%;
+    float: none;
+    display: flex;
+    align-items: center;
+  }
+
+  &__link {
+    display: block;
+    margin: 0 5px;
+    transition: .3s;
+
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &_title {
+    padding-top: 13px;
+    position: relative;
+    display: inline-block;
+    float: left;
+  }
 }
 
 @media all and(max-width: 991px) {
-  .soc_block_div_title {
+  .soc_block_title {
     padding-top: 13px;
     position: relative;
     display: block;
@@ -2600,7 +2633,7 @@
   &__inner {
     padding-bottom: 33%;
     min-height: 440px;
-    background-image: url("../images/bg-video.jpg");
+    background-image: url("../images/poster.jpg");
     background-size: cover;
     background-position: 50% 50%;
     position: relative;
@@ -2618,8 +2651,21 @@
   align-items: center;
   justify-content: center;
 
+  &:before {
+    content: '';
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.25);
+  }
+
   &__inner {
     text-align: center;
+    position: relative;
+    z-index: 10;
   }
 
   &__title {
@@ -2679,10 +2725,13 @@
   padding: 45px 0;
 
   &__inner {
-    background-image: url("../images/snow-action.png");
-    background-size: cover;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
+
+    @media screen and (min-width: 992px){
+      background-image: url("../images/snow-action.png");
+      background-size: cover;
+      background-position: 25% 170px;
+      background-repeat: no-repeat;
+    }
   }
 
   &__title {
@@ -2796,7 +2845,8 @@
 }
 
 .fancybox-skin {
-  background: #9a3a36;
+  background: transparent;
+  box-shadow: none !important;
 }
 
 .timer-element {
