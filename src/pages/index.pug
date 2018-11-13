@@ -1,0 +1,320 @@
+extends ../templates/layout
+
+block vars
+    - var bodyClass = ''
+    - var footerClass = ''
+    - var headerClass = ''
+    - var pageTitle = 'New Year'
+    - var dir = ''
+
+block main
+    section.section.section--red.sentence
+        .sentence__inner
+            .box
+                .sentence__grid
+                    .sentence__cell
+                        .sentence-gallery.slider-pro
+                            .sp-slides
+                                .sp-slide
+                                    img.sp-image(data-src='images/sentence-gallery/1.jpg')
+                                .sp-slide
+                                    img.sp-image(data-src='images/sentence-gallery/2.jpg')
+                                .sp-slide
+                                    img.sp-image(data-src='images/sentence-gallery/3.jpg')
+                                .sp-slide
+                                    img.sp-image(data-src='images/sentence-gallery/4.jpg')
+                                .sp-slide
+                                    img.sp-image(data-src='images/sentence-gallery/5.jpg')
+                                .sp-slide
+                                    img.sp-image(data-src='images/sentence-gallery/6.jpg')
+                                .sp-slide
+                                    img.sp-image(data-src='images/sentence-gallery/7.jpg')
+                                .sp-slide
+                                    img.sp-image(data-src='images/sentence-gallery/8.jpg')
+
+                            .sp-thumbnails
+                                img.sp-thumbnail(src='images/sentence-gallery/1.jpg')
+                                img.sp-thumbnail(src='images/sentence-gallery/2.jpg')
+                                img.sp-thumbnail(src='images/sentence-gallery/3.jpg')
+                                img.sp-thumbnail(src='images/sentence-gallery/4.jpg')
+                                img.sp-thumbnail(src='images/sentence-gallery/5.jpg')
+                                img.sp-thumbnail(src='images/sentence-gallery/6.jpg')
+                                img.sp-thumbnail(src='images/sentence-gallery/7.jpg')
+                                img.sp-thumbnail(src='images/sentence-gallery/8.jpg')
+
+
+
+                    .sentence__cell
+                        .sentence-data
+                            .sentence-data__title Что мы предлагаем:
+                            ul.sentence-data__list
+                                li.sentence-data__item Письмо  <i class="ico ico--mail"></i>  от Деда Мороза.
+                                li.sentence-data__item Красочный новогодний конверт.
+                                li.sentence-data__item Набор новогодних наклеек.
+                                li.sentence-data__item Оплата онлайн на сайте.
+                                li.sentence-data__item Бесплатная доставка в почтовый ящик.
+                                li.sentence-data__item Стоимость всего 9.95 р.
+                            .btn-inner.btn-inner--left
+                                a(href="#style-decor").btn.btn--cost
+                                    | Подарить за
+                                    span(class="cost-btn")  9.95
+                                    |  руб.
+                                .btn-info
+                                    | Бесплатная доставка по Беларуси
+                                    span.helper(data-content="Описание появляющееся по наведению") ?
+    section.b-video
+        .b-video__inner
+            .b-video-data
+                .b-video-data__inner
+                    .b-video-data__title Просмотрите видео <br> «Письмо от деда Мороза»
+                    a(data-fancybox-type="iframe" href="https://www.youtube.com/embed/6RGDnQIJvRk?iframe&frameborder=0").b-video-data__play
+    section.section.action
+        .action__img.action__img--rb1
+            img(src='./images/preview__img5.png')
+        .action__img.action__img--rb2
+            img(src='./images/preview__img6.png')
+        .action__img.action__img--lb2
+            img(src='./images/preview__img8.png')
+        .box
+            .action__inner
+                .action__title Отправьте письмо с подарком <br> от Деда Мороза за <span class="old-cost"> 14.95 руб.</span> <span class="new-cost"> 9.95 руб! </span>
+                .timer
+                    .timer__header До окончания акции осталось:
+                    .timer__inner
+                        .clock
+                .btn-inner
+                    a(href="#style-decor").btn.btn--cost
+                        | Подарить за
+                        span(class="cost-btn") 9.95
+                        |  руб.
+                    .btn-info.btn-info--timer
+                        | Бесплатная доставка по Беларуси
+                        span.helper(data-content="Описание появляющееся по наведению") ?
+    section.section.style-decor#style-decor
+        .box.box--steps
+            .heading Подарить письмо:
+            .form-decor
+                .nav-f-decor
+                    .nav-f-decor__item.js-go-prev1.nav-f-decor__item--active
+                        .nav-f-decor__number 1
+                        .nav-f-decor__name Кому подарить?
+                    .nav-f-decor__item.js-go-prev2
+                        .nav-f-decor__number 2
+                        .nav-f-decor__name Выберите дизайн
+                    .nav-f-decor__item.js-go-prev3
+                        .nav-f-decor__number 3
+                        .nav-f-decor__name Выберите текст
+                    .nav-f-decor__item
+                        .nav-f-decor__number 4
+                        .nav-f-decor__name Оформите заказ
+                .page-f-decor
+                    .page-f-decor__item.page-f-decor__item--active
+                        .mail-for
+                            .mail-for__item
+                                .mail-for__person
+                                    .mail-for__images
+                                        img(src='./images/person/girl.png')
+                                    .mail-for__name  Девочке
+                                .mail-for__person
+                                    .mail-for__images
+                                        img(src='./images/person/boy.png')
+                                    .mail-for__name  Мальчику
+                            .mail-for__item
+                                .mail-for__person
+                                    .mail-for__images
+                                        img(src='./images/person/mother.png')
+                                    .mail-for__name  Женщине
+                                .mail-for__person
+                                    .mail-for__images
+                                        img(src='./images/person/father.png')
+                                    .mail-for__name  Мужчине
+                            .mail-for__item
+                                .mail-for__person
+                                    .mail-for__images
+                                        img(src='./images/person/grandmother.png')
+                                    .mail-for__name  Бабушке
+                                .mail-for__person
+                                    .mail-for__images
+                                        img(src='./images/person/grandfather.png')
+                                    .mail-for__name  Дедушке
+                        .btn-inner
+                            a(href='#').btn.mail-for__btn.js-go-to-step2.btn--disabled Далее
+                    .page-f-decor__item
+                        .style-oformlenia
+                            .style-oformlenia__item
+                                .style-oformlenia__images
+                                    img(src="images/step2/3.jpg", alt="design3")
+                                .style-oformlenia__name Дизайн №1
+                            .style-oformlenia__item
+                                .style-oformlenia__images
+                                    img(src="images/step2/2.jpg", alt="design2")
+                                .style-oformlenia__name Дизайн №2
+                            .style-oformlenia__item
+                                .style-oformlenia__images
+                                    img(src="images/step2/1.jpg", alt="design1")
+                                .style-oformlenia__name Дизайн №3
+                        .btn-inner
+                            a(href="#").btn.btn--step.btn--disabled.style-oformlenia__btn.js-go-to-step3 Далее
+                    .page-f-decor__item
+                        .text-oform
+                            .text-oform__item
+                                a.text-oform__images(rel="group" title="описание" href="images/step3/11.jpg")
+                                    img(src="images/style-text_2.jpg", alt="content")
+                                .text-oform__name Текст №1
+                            .text-oform__item
+                                a.text-oform__images(rel="group" title="описание" href="images/step3/12.jpg")
+                                    img(src="images/style-text_2.jpg", alt="content")
+                                .text-oform__name Текст №2
+                            .text-oform__item
+                                a.text-oform__images(rel="group" title="описание" href="images/step3/13.jpg")
+                                    img(src="images/style-text_2.jpg", alt="content")
+                                .text-oform__name Текст №3
+                        .btn-inner
+                            a(href="#").btn.btn--step.btn--disabled.text-oform__btn.js-go-to-step4 Далее
+                    .page-f-decor__item
+                        form.ordering
+                            .grid
+                                .grid__cell
+                                    .ordering-form
+                                        .ordering-form__row
+                                            .ordering-form__name Кого будем поздравлять
+                                            .ordering-form__item
+                                                .ordering-form__group.ordering-form__group--xs
+                                                    label.ordering-form__label.ordering-form__label--required Имя
+                                                    input(class='ordering-form__input' type='text' name="name" placeholder="Ксюша")
+                                                .ordering-form__group.ordering-form__group--xs
+                                                    label.ordering-form__label.ordering-form__label--required Фамилия
+                                                    input(class='ordering-form__input' type='text' placeholder="Иванова")
+                                                .ordering-form__group.ordering-form__group--xs
+                                                    label.ordering-form__label.ordering-form__label--required Возраст получателя
+                                                    input(class='ordering-form__input' type='text' placeholder="4 года")
+                                                .ordering-form__group.ordering-form__group--xs
+                                                    label.ordering-form__label Кому передать привет?
+                                                    input(class='ordering-form__input' type='text' placeholder="Сестре маше")
+                                        .ordering-form__row
+                                            .ordering-form__name Адрес получения
+                                            .ordering-form__item
+                                                .ordering-form__group
+                                                    label.ordering-form__label.ordering-form__label--required Город:
+                                                    input(class='ordering-form__input' type='text' placeholder="Минск")
+                                                .ordering-form__group
+                                                    label.ordering-form__label.ordering-form__label--required Адрес:
+                                                    input(class='ordering-form__input' type='text' placeholder="ул. Пушкина, д. 5, кв.56")
+                                                .ordering-form__group.ordering-form__group--small
+                                                    label.ordering-form__label.ordering-form__label--required Индекс:
+                                                    input(class='ordering-form__input' type='text' placeholder="220089")
+                                            .btn-inner.btn-inner--left
+                                                    input(class='ordering-form__check' type='checkbox', id='check2')
+                                                    label(for="check2").ordering-form__check-label
+                                                       | Отправить первым классом с трек номером <strong> +1,5 руб. </strong>
+                                                       i.helper.helper--dark(data-content="Описание появляющееся по наведению") ?
+                                        .ordering-form__row
+                                            .ordering-form__name Как с вами связаться
+                                            .ordering-form__item
+                                                .ordering-form__group
+                                                    label.ordering-form__label.ordering-form__label--required Имя:
+                                                    input(class='ordering-form__input' type='text' placeholder="Ваше имя")
+                                                .ordering-form__group.ordering-form__group--big
+                                                    label.ordering-form__label.ordering-form__label--required Телефон:
+                                                    input(class='ordering-form__input' type='text'  placeholder="+375-хх-xxx-xx-xx")
+                                                .ordering-form__group.ordering-form__group--textarea
+                                                    label.ordering-form__label.ordering-form__label--required Комментарий:
+                                                    textarea(placeholder="Введите комментраий к письму").ordering-form__textarea
+                                    .ordering-footer.sm-hidden
+                                        .ordering-footer__inner
+                                            .ordering-footer__row
+                                                | После того, как Вы нажмете “Оплатить”, сайт перенаправит Вас на
+                                                img(src="images/pay8.png", alt='расчет').ordering-footer__img
+                                                img(src="images/pay9.png", alt='assist').ordering-footer__img
+                                            .ordering-footer__row В случае возникновения трудностей с оформлением заказа наберите: <br> <a class='ordering__help-tel' href='tel:+375298882019'>‎ +375 (29) 888-2019</a>
+                                .grid__cell
+                                    .ordering__info.info-ordering
+                                        .info-ordering__name Ваше поздравление
+                                        a(title="описание" href="images/card-pozdrav.png").info-ordering__images
+                                            img(src='./images/card-pozdrav.png')
+                                    .full-data
+                                        .full-data__info
+                                            .full-data__item
+                                                .full-data__name Ваш заказ:
+                                                .full-data__value
+                                                    div Для мальчиков
+                                                    div Дизайн письма №1
+                                                    div Текст письма №1
+                                            .full-data__item.full-data__item--no-pb
+                                                .full-data__name Стоимость заказа:
+                                                .full-data__value 9.95 руб.
+                                            .full-data__item
+                                                .full-data__name Отправка 1-м классом:
+                                                .full-data__value 1.5 руб.
+                                            .full-data__item.full-data__item--all-cost
+                                                .full-data__name Общая стоимость:
+                                                .full-data__value 10.45 руб.
+                                    .btn-inner
+                                        .nominal-certificate__check-group
+                                            input(class='nominal-certificate__check js--i-agree' type='checkbox' checked, id='check3')
+                                            label(for="check3").nominal-certificate__check-label Я согласен с
+                                                a(href="#").nominal-certificate__link-offert условиями оферты
+                                                span.helper.helper--dark(data-content="Описание появляющееся по наведению") ?
+                                        input(type="submit" value="Оплатить").btn.btn--ordering.btn--form
+                                    .ordering-footer.sm-visible
+                                        .ordering-footer__inner
+                                            .ordering-footer__row
+                                                | После того, как Вы нажмете “Оплатить”, сайт перенаправит Вас на
+                                                img(src="images/pay8.png", alt='расчет').ordering-footer__img
+                                                img(src="images/pay9.png", alt='assist').ordering-footer__img
+                                            .ordering-footer__row В случае возникновения трудностей с оформлением заказа наберите: <br> <a class='ordering__help-tel' href='tel:+375298882019'>‎ +375 (29) 888-2019</a>
+
+
+
+    section.section.section--white.information
+        .box
+            .hr-heading
+            .heading
+                span Поздравление от деда мороза это
+            .information__inner
+                .information__item
+                    .information__images(data-popup="popup_info", data-modal-text='<span>Новый год — это время, когда хочется верить в чудеса, загадывать желания и, конечно, дарить и получать подарки! И мы постараемся доставить в каждый дом, наш оригинальный подарок. В создании письма и конверта, мы использовали наилучшие материалы (бумага хорошей плотности, высококачественная печать, оригинальный дизайн). Единственный в Беларуси, интернет-магазин Письма от Деда Мороза online.</span>')
+                        img(src='./images/info-item1.png')
+                    .information__name.
+                        Уникальный сервис Новогоднего
+                        Поздравления В Республике Беларусь
+                .information__item
+                    .information__images(data-popup="popup_info", data-modal-text='<span>Оплата производится при помощи провайдера электронных платежей ASSIST – это мультибанковская система приема платежей по банковским картам через интернет, позволяющая в реальном времени производить авторизацию и обработку электронных платежей. В Беларуси компания подключает интернет-магазины и сервисы к приему платежей по банковским картам онлайн, а также к оплатам на сайте через систему АИС «Расчет» («ЕРИП»). С помощью Assist Belarus покупатели могут расплачиваться на сайтах картами платежных систем карт VISA, MasterCard, American Express, БЕЛКАРТ.</span>')
+                        img(src='./images/info-item2.png')
+                    .information__name.
+                        Удобный способ оплаты
+                .information__item
+                    .information__images(data-popup="popup_info", data-modal-text='<span> Тестовый текст </span>' )
+                        img(src='./images/info-item3.png')
+                    .information__name.
+                        Все письма будут доставлены в период
+                        с 22 по 31 Декабря 2017 года
+                .information__item
+                    .information__images(data-popup="popup_info", data-modal-text='<span>  Тестовый текст </span> ' )
+                        img(src='./images/info-item4.png')
+                    .information__name.
+                        Доставка в любую точку Беларуси,
+                        в почтовый ящик
+                .information__item
+                    .information__images(data-popup="popup_info", data-modal-text='<span>  Тестовый текст </span> ' )
+                        img(src='./images/info-item5.png')
+                    .information__name.
+                        Стоимость всего 9.95 руб.
+            .gallery
+                .gallery__header Галерея
+                .gallery__inner.owl-carousel
+                    .gallery__item(style= "background-image: url('./images/card-for-newYear.jpg');")
+                    .gallery__item(style= "background-image: url('./images/card-for-newYear.jpg');")
+                    .gallery__item(style= "background-image: url('./images/card-for-newYear.jpg');")
+                    .gallery__item(style= "background-image: url('./images/card-for-newYear.jpg');")
+                    .gallery__item(style= "background-image: url('./images/card-for-newYear.jpg');")
+            .btn-inner
+                a(href="#style-decor").btn
+                    span Заказать за <span class="cost-btn"> 9.95 </span> руб.
+    section.caunt-users
+        .box
+            .caunt-users__inner
+                .caunt-users__images
+                    img(src='./images/child.png')
+                .caunt-users__header Уже <span class="shapka-count"> 1300 </span> счастливых получателей!
+

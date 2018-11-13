@@ -1,0 +1,29 @@
+@import "reset";
+@import "owl.carousel.min.css";
+@import "owl.theme.default.min.css";
+//@import "slick.scss";
+//@import "slick-theme.scss";
+@import "popup.scss";
+@import "slider-pro";
+
+// timer
+@import "flipclock.css";
+
+// fancybox
+@import "jquery.fancybox.css";
+
+
+@import "mixins";
+@import "variables";
+@import "sprite";
+@import "typography";
+//@import "bootstrap";
+//@import "bs-override";
+//@import "styleForm";
+//@import "navs";
+
+@import "global";
+
+
+// Pages
+@import "index/styles";

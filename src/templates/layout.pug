@@ -1,0 +1,126 @@
+//include ../partials/mixins/
+
+block vars
+    - var bodyClass = ''
+    - var footerClass = ''
+    - var headerClass = ''
+    - var pageTitle = ''
+    - var dir = ''
+    - var images = '/images/'
+
+doctype html
+html(lang='ru-RU')
+
+    head
+        meta(charset='UTF-8')
+        meta(name='format-detection', content='telephone=no')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        title #{pageTitle}
+        block styles
+        //link(rel='stylesheet', href= dir + 'css/flipclock.css')
+        link(rel='stylesheet', href= dir + 'css/styles.min.css')
+    body(class=bodyClass)
+        .wrapper
+            header(class="header" + headerClass)
+                .preview
+                    .preview__img.preview__img--lt1
+                       img(src='./images/preview__img1.png')
+                    .preview__img.preview__img--tc1
+                       img(src='./images/preview__img2.png')
+                    .preview__img.preview__img--tc2
+                       img(src='./images/preview__img1.png')
+                    .preview__img.preview__img--rt1
+                       img(src='./images/preview__img4.png')
+
+                    .box.box--small
+                        .header__inner
+                            .preview__heading-top
+                                img(src='./images/header-top-hr.png')
+                            h1.h1-heading
+                                | Хотите <b> подарить радость и волшебство </b> <br> в Новый Год?
+                            .btn-inner.btn-inner--preview
+                                a(href="#style-decor").btn.btn--cost
+                                    | Подарить за
+                                    span(class="cost-btn")  9.95
+                                    |  руб.
+                                .btn-info
+                                    | Бесплатная доставка по Беларуси
+                                    span.helper(data-content="Описание появляющееся по наведению") ?
+                            img(src='./images/mail4.gif').post-image
+
+
+
+            main.main
+                block main
+            footer(class="footer " + footerClass)
+                .box
+                    .footer__inner
+                        .footer__contacts
+                            .footer__name Контакты
+                            a(href="tel:+375222322332").footer__phone +375 (22) 232-23-32
+                            a(href="mailto:mail@mail.com").footer__mail mail@mail.com
+                        .footer__pay
+                            .footer__name Мы принимаем к оплате:
+                            .f-pay
+                                .f-pay__item
+                                    img(src='./images/pay1.png')
+                                .f-pay__item
+                                    img(src='./images/pay2.png')
+                                .f-pay__item
+                                    img(src='./images/pay3.png')
+                                .f-pay__item
+                                    img(src='./images/pay4.png')
+                                .f-pay__item
+                                    img(src='./images/pay5.png')
+                                .f-pay__item
+                                    img(src='./images/pay6.png')
+                                .f-pay__item
+                                    img(src='./images/pay7.png')
+                        .footer__link-inner
+                            a(href="#").footer__links Договор оферты
+                            a(href="#").footer__links Доставка и оплата
+                            a(href="#").footer__links Как заказать
+        .popup#popup_succes
+            .popup__box
+                .popup__body.popup__body--succes
+                    .feedback__header
+                        a(class="js-popup__close popup__close close close_big" href="#")
+                            span.close-span.close-span--first
+                            span.close-span.close-span--last
+                        .heading.heading--popup
+                            span  Заявка успешно отправлена
+                    .popup__content
+                        .btn-inner
+                            a(class="js-popup__close btn btn--small" href="#") ОК
+                    .preview__img.preview__img--lb-popup
+                        img(src='./images/preview__img7.png')
+                    .preview__img.preview__img--rb-popup
+                        img(src='./images/preview__img8.png')
+        .popup#popup_info
+            .popup__box
+                .popup__body.popup__body--succes
+                    .feedback__header
+                        a(class="js-popup__close popup__close close close_big" href="#")
+                            span.close-span.close-span--first
+                            span.close-span.close-span--last
+                        .heading.heading--popup.item-modal-text
+                            span
+                    .popup__content
+                        .btn-inner
+                            a(class="js-popup__close btn btn--small" href="#") ОК
+                    .preview__img.preview__img--lb-popup
+                        img(src='./images/preview__img7.png')
+                    .preview__img.preview__img--rb-popup
+                        img(src='./images/preview__img8.png')
+
+        script(src="js/vendor/jquery-3.2.1.min.js")
+        //script(src="js/vendor/slick.js")
+        script(src="js/vendor/owl.carousel.min.js")
+        script(src="js/vendor/flipclock.js")
+        script(src="js/vendor/jquery.fancybox.pack.js")
+        script(src="js/vendor/jquery.h5validate.js")
+        script(src="js/vendor/jquery.inputmask.bundle.min.js")
+        script(src="js/vendor/jquery.sliderPro.min.js")
+        //script(src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" )
+        block script
+        script(src="js/app.min.js")

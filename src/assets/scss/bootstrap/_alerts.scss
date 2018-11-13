@@ -1,0 +1,109 @@
+//
+// Alerts
+// --------------------------------------------------
+
+
+// Base styles
+// -------------------------
+
+.alert {
+  padding: $alert-padding;
+  margin-bottom: $line-height-computed;
+  border-radius: 0;
+  padding: 20px;
+  padding-left: 60px;
+  position: relative;
+  min-width: 230px;
+
+  // Headings for larger alerts
+  h4 {
+    margin-top: 0;
+    // Specified for the h4 to prevent conflicts of changing $headings-color
+    color: inherit;
+  }
+
+  // Provide class for links that match alerts
+  .alert-link {
+    font-weight: $alert-link-font-weight;
+  }
+
+  // Improve alignment and spacing of inner content
+  > p,
+  > ul {
+    margin-bottom: 0;
+  }
+
+  > p + p {
+    margin-top: 5px;
+  }
+
+  i.icon-alert {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+
+    &-success {
+//      @include i;
+//      @include i-alert-success;
+    }
+
+    &-danger {
+//      @include i;
+//      @include i-alert-error;
+    }
+
+    &-warning {
+//      @include i;
+//      @include i-alert-warning;
+    }
+  }
+}
+
+// Dismissible alerts
+//
+// Expand the right padding and account for the close button's positioning.
+
+.alert-dismissable, // The misspelled .alert-dismissable was deprecated in 3.2.0.
+.alert-dismissible {
+  padding-right: ($alert-padding + 20);
+
+  // Adjust close link position
+  .close {
+    position: relative;
+    top: -2px;
+    right: -21px;
+    color: inherit;
+  }
+}
+
+// Alternate styles
+//
+// Generate contextual modifier classes for colorizing the alert.
+
+.alert-success {
+  @include alert-variant(#55af7d, $alert-success-border, $alert-success-text);
+  color: #fff;
+  letter-spacing: 1px;
+  font-size: 16px;
+}
+
+.alert-info {
+  @include alert-variant($alert-info-bg, $alert-info-border, $alert-info-text);
+  color: #fff;
+  letter-spacing: 1px;
+  font-size: 16px;
+}
+
+.alert-warning {
+  @include alert-variant(#beaf5b, $alert-warning-border, $alert-warning-text);
+  color: #fff;
+  letter-spacing: 1px;
+  font-size: 16px;
+}
+
+.alert-danger {
+  @include alert-variant(#914a4a, $alert-danger-border, $alert-danger-text);
+  color: #fff;
+  letter-spacing: 1px;
+  font-size: 16px;
+}
