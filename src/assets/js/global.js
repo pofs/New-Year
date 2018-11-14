@@ -125,9 +125,12 @@ function opentabs1() {
     $('.nav-f-decor__item').eq(i).addClass('nav-f-decor__item--active');
     $('.page-f-decor__item').eq(i).addClass('page-f-decor__item--active');
 
-    var el = '#style-decor';
-    var top = $(el).offset().top;
-    $('body,html').animate({scrollTop: top}, 1500);
+    if(isMobile()) {
+        var el = '#style-decor';
+        var top = $(el).offset().top;
+        $('body,html').animate({scrollTop: top}, 1500);
+    }
+
     return false;
 }
 
@@ -142,9 +145,12 @@ function opentabs2(e) {
     // $('.page-f-decor__item').eq(i).show();
     $('.page-f-decor__item').eq(i).addClass('page-f-decor__item--active');
 
-    var el = '#style-decor';
-    var top = $(el).offset().top;
-    $('body,html').animate({scrollTop: top}, 1500);
+    if(isMobile()) {
+        var el = '#style-decor';
+        var top = $(el).offset().top;
+        $('body,html').animate({scrollTop: top}, 1500);
+    }
+
     return false;
 }
 
@@ -159,9 +165,12 @@ function opentabs3(e) {
     $('.nav-f-decor__item').eq(i).addClass('nav-f-decor__item--active');
     $('.page-f-decor__item').eq(i).addClass('page-f-decor__item--active');
 
-    var el = '#style-decor';
-    var top = $(el).offset().top;
-    $('body,html').animate({scrollTop: top}, 1500);
+    if(isMobile()) {
+        var el = '#style-decor';
+        var top = $(el).offset().top;
+        $('body,html').animate({scrollTop: top}, 1500);
+    }
+
     return false;
 
 }
@@ -188,9 +197,12 @@ function opentabs4(e) {
         }
     })
 
-    var el = '#style-decor';
-    var top = $(el).offset().top;
-    $('body,html').animate({scrollTop: top}, 1500);
+    if(isMobile()) {
+        var el = '#style-decor';
+        var top = $(el).offset().top;
+        $('body,html').animate({scrollTop: top}, 1500);
+    }
+
     return false;
 
 }
@@ -260,9 +272,11 @@ function activeAvatar() {
     $('.mail-for__person').addClass('mail-for__person--opacity');
     $(this).closest('.mail-for__person').addClass('mail-for__person--active');
 
-    var el = '.mail-for__btn';
-    var top = $(el).offset().top;
-    $('body,html').animate({scrollTop: top - 300}, 1500);
+    if(isMobile()) {
+        var el = '.mail-for__btn';
+        var top = $(el).offset().top;
+        $('body,html').animate({scrollTop: top - 300}, 1500);
+    }
 }
 
 function activeStyle() {
@@ -371,6 +385,7 @@ $(document).ready(function () {
 
 $(document).on('click touchend', '.js-popup-footer', infoModal);
 $(document).on('click touchend', '.js-popup-footer-long', myInfoModal);
+
 $('.close, #popup_info').on('click touchend', function () {
     $(this).find('.close').css('right', 10)
 });
@@ -385,3 +400,9 @@ $('.gallery__item').on('click', function (e) {
     e.preventDefault();
     $(this).fancybox();
 });
+
+function isMobile() {
+    var width = document.documentElement.clientWidth;
+    if(width > 767) return false
+    return true
+}

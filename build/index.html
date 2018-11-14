@@ -11,6 +11,7 @@
 		<meta name="google-site-verification" content="0O_kzRYcygKFDUqJT88xlPfqAPqdqrjj9B4lZhTQSiE">
 		<link rel="shortcut icon" href="images/favicon/favicon.png" type="image/png">
 		<link rel="stylesheet" href="css/styles.min.css?v2.1">
+		<script src="js/vendor/jquery-3.2.1.min.js"></script>
 		<script type="text/javascript">
 			(window.Image ? (new Image()) : document.createElement('img')).src = 'https://vk.com/rtrg?p=VK-RTRG-191474-1oQai';
 			
@@ -77,7 +78,7 @@
 											<li class="sentence-data__item">Стоимость всего 9.95 р.</li>
 										</ul>
 										<div class="btn-inner btn-inner--left"><a class="btn btn--cost" href="#style-decor">Подарить за<span class="cost-btn"> 9.95</span> руб.</a>
-											<div class="btn-info">Бесплатная доставка по Беларуси<span class="helper">?
+											<div class="btn-info btn-info--dark">Бесплатная доставка по Беларуси<span class="helper">?
 													<div class="helper__content">
 														<ul>
 														    <li> Письма доставляются в любую точку Беларуси! </li>
@@ -112,7 +113,41 @@
 							<div class="timer">
 								<div class="timer__header">До окончания акции осталось:</div>
 								<div class="timer__inner">
-									<div class="clock"></div>
+									<!--.clock-->
+									<script src="https://e-timer.ru/js/etimer.js"></script>
+									<script type="text/javascript">
+										jQuery(document).ready(function () {
+										    jQuery(".eTimer").eTimer({
+										        etType: 0,
+										        etDate: "31.12.2018.23.59",
+										        etTitleText: "",
+										        etTitleSize: 10,
+										        etShowSign: 1,
+										        etSep: " ",
+										        etFontFamily: "Georgia",
+										        etTextColor: "white",
+										        etPaddingTB: 5,
+										        etPaddingLR: 5,
+										        etBackground: "transparent",
+										        etBorderSize: 0,
+										        etBorderRadius: 0,
+										        etBorderColor: "#d76262",
+										        etShadow: " 0px 0px 0px 0px #333333",
+										        etLastUnit: 4,
+										        etNumberFontFamily: "Impact",
+										        etNumberSize: 22,
+										        etNumberColor: "black",
+										        etNumberPaddingTB: 1,
+										        etNumberPaddingLR: 6,
+										        etNumberBackground: "#f9fbfb",
+										        etNumberBorderSize: 3,
+										        etNumberBorderRadius: 4,
+										        etNumberBorderColor: "white",
+										        etNumberShadow: "inset 0px 0px 10px 0px transparent"
+										    });
+										});
+									</script>
+									<div class="eTimer"></div>
 								</div>
 							</div>
 							<div class="btn-inner"><a class="btn btn--cost" href="#style-decor">Подарить за<span class="cost-btn">9.95</span> руб.</a>
@@ -206,20 +241,20 @@
 								</div>
 								<div class="page-f-decor__item">
 									<div class="text-oform">
-										<div class="text-oform__item"><a class="text-oform__images" rel="group" title="Текст №1" href="images/step3/11.jpg"><img src="images/style-text_2.jpg" alt="content"></a>
+										<div class="text-oform__item"><a class="text-oform__images" rel="group" title="Текст №1" href="images/step3/11.jpg"><img src="images/style-text_1.jpg" alt="content"></a>
 											<div class="text-oform__name">Текст №1</div>
 										</div>
 										<div class="text-oform__item"><a class="text-oform__images" rel="group" title="Текст №2" href="images/step3/12.jpg"><img src="images/style-text_2.jpg" alt="content"></a>
 											<div class="text-oform__name">Текст №2</div>
 										</div>
-										<div class="text-oform__item"><a class="text-oform__images" rel="group" title="Текст №3" href="images/step3/13.jpg"><img src="images/style-text_2.jpg" alt="content"></a>
+										<div class="text-oform__item"><a class="text-oform__images" rel="group" title="Текст №3" href="images/step3/13.jpg"><img src="images/style-text_3.jpg" alt="content"></a>
 											<div class="text-oform__name">Текст №3</div>
 										</div>
 									</div>
 									<div class="btn-inner"><a class="btn btn--step btn--disabled text-oform__btn js-go-to-step4" href="#">Далее</a></div>
 								</div>
 								<div class="page-f-decor__item">
-									<form class="ordering">
+									<form class="ordering ordering" action="connect.php" method="post" id="js-validate">
 										<div class="grid">
 											<div class="grid__cell">
 												<div class="ordering-form">
@@ -228,15 +263,15 @@
 														<div class="ordering-form__item">
 															<div class="ordering-form__group ordering-form__group--xs">
 																<label class="ordering-form__label ordering-form__label--required">Имя</label>
-																<input class="ordering-form__input" type="text" name="name" placeholder="Ксюша">
+																<input class="ordering-form__input" type="text" name="name" placeholder="Ксюша" required>
 															</div>
 															<div class="ordering-form__group ordering-form__group--xs">
 																<label class="ordering-form__label ordering-form__label--required">Фамилия</label>
-																<input class="ordering-form__input" type="text" placeholder="Иванова">
+																<input class="ordering-form__input" type="text" placeholder="Иванова" required>
 															</div>
 															<div class="ordering-form__group ordering-form__group--xs">
 																<label class="ordering-form__label ordering-form__label--required">Возраст получателя</label>
-																<input class="ordering-form__input" type="text" placeholder="4 года">
+																<input class="ordering-form__input" type="text" placeholder="4 года" required>
 															</div>
 															<div class="ordering-form__group ordering-form__group--xs">
 																<label class="ordering-form__label">Кому передать привет?</label>
@@ -249,15 +284,15 @@
 														<div class="ordering-form__item">
 															<div class="ordering-form__group">
 																<label class="ordering-form__label ordering-form__label--required">Город:</label>
-																<input class="ordering-form__input" type="text" placeholder="Минск">
+																<input class="ordering-form__input" type="text" placeholder="Минск" required>
 															</div>
 															<div class="ordering-form__group">
 																<label class="ordering-form__label ordering-form__label--required">Адрес:</label>
-																<input class="ordering-form__input" type="text" placeholder="ул. Пушкина, д. 5, кв.56">
+																<input class="ordering-form__input" type="text" placeholder="ул. Пушкина, д. 5, кв.56" required>
 															</div>
 															<div class="ordering-form__group ordering-form__group--small">
 																<label class="ordering-form__label ordering-form__label--required">Индекс:</label>
-																<input class="ordering-form__input" type="text" placeholder="220089">
+																<input class="ordering-form__input" type="text" placeholder="220089" required>
 															</div>
 														</div>
 														<div class="btn-inner btn-inner--left">
@@ -275,15 +310,15 @@
 														<div class="ordering-form__item">
 															<div class="ordering-form__group">
 																<label class="ordering-form__label ordering-form__label--required">Имя:</label>
-																<input class="ordering-form__input" type="text" placeholder="Ваше имя">
+																<input class="ordering-form__input" type="text" placeholder="Ваше имя" required>
 															</div>
 															<div class="ordering-form__group ordering-form__group--big">
 																<label class="ordering-form__label ordering-form__label--required">Телефон:</label>
-																<input class="ordering-form__input" type="text" placeholder="+375-хх-xxx-xx-xx">
+																<input class="ordering-form__input" name="phone" type="text" placeholder="+375-хх-xxx-xx-xx" required>
 															</div>
 															<div class="ordering-form__group ordering-form__group--textarea">
 																<label class="ordering-form__label ordering-form__label--required">Комментарий:</label>
-																<textarea class="ordering-form__textarea" placeholder="Введите комментраий к письму"></textarea>
+																<textarea class="ordering-form__textarea" placeholder="Введите комментраий к письму" required></textarea>
 															</div>
 														</div>
 													</div>
@@ -327,12 +362,12 @@
 														<input class="nominal-certificate__check js--i-agree" type="checkbox" checked id="check3">
 														<label class="nominal-certificate__check-label" for="check3">Я согласен с<a class="nominal-certificate__link-offert" href="publichnaya-oferta-pismo-deda.by.docx">условиями оферты</a></label>
 													</div>
-													<input class="btn btn--ordering btn--form" type="submit" value="Оплатить">
+													<input class="btn btn--ordering btn--form ordering-form__group--success" type="submit" value="Оплатить">
 												</div>
 												<div class="ordering-footer">
 													<div class="ordering-footer__inner">
 														<div class="ordering-footer__row ordering-footer__row--center">
-															<div>Вы будете перенаправлены на</div><img class="ordering-footer__img" src="images/pay9.png" alt="assist"><img class="ordering-footer__img" src="images/pay8.png" alt="расчет">
+															<div>Вы будете перенаправлены на</div><img class="ordering-footer__img" src="images/assist.png" alt="assist"><img class="ordering-footer__img" src="images/pay8.png" alt="расчет">
 														</div>
 														<div class="ordering-footer__row sm-visible">В случае возникновения трудностей с оформлением заказа наберите: <br> <a class='ordering__help-tel' href='tel:+375298882019'>‎ +375 (29) 888-2019</a></div>
 													</div>
@@ -386,10 +421,19 @@
 					<div class="box">
 						<div class="gallery" id="gallery">
 							<div class="gallery__header">Галерея</div>
-							<div class="gallery__inner owl-carousel"><a class="gallery__item" style="background-image: url('./images/slider/IMG_1763.jpg');" href="images/slider/IMG_1763.jpg"></a><a class="gallery__item" style="background-image: url('./images/slider/IMG_1784.jpg');" href="images/slider/IMG_1784.jpg"></a><a class="gallery__item" style="background-image: url('./images/slider/IMG_1795.jpg');" href="images/slider/IMG_1795.jpg"></a><a class="gallery__item" style="background-image: url('./images/slider/IMG_1804.jpg');" href="images/slider/IMG_1804.jpg"></a><a class="gallery__item" style="background-image: url('./images/slider/IMG_1839.jpg');" href="images/slider/IMG_1839.jpg"></a><a class="gallery__item" style="background-image: url('./images/slider/IMG_1808.jpg');" href="images/slider/IMG_1808.jpg"></a><a class="gallery__item" style="background-image: url('./images/slider/IMG_1812.jpg');" href="images/slider/IMG_1812.jpg"></a><a class="gallery__item" style="background-image: url('./images/slider/IMG_1822.jpg');" href="images/slider/IMG_1822.jpg"></a></div>
+							<div class="gallery__inner owl-carousel"><a class="gallery__item" style="background-image: url('./images/slider/501.jpg');" href="images/slider/501.jpg"></a><a class="gallery__item" style="background-image: url('./images/slider/502.jpg');" href="images/slider/502.jpg"></a><a class="gallery__item" style="background-image: url('./images/slider/503.jpg');" href="images/slider/503.jpg"></a><a class="gallery__item" style="background-image: url('./images/slider/504.jpg');" href="images/slider/504.jpg"></a><a class="gallery__item" style="background-image: url('./images/slider/505.jpg');" href="images/slider/505.jpg"></a><a class="gallery__item" style="background-image: url('./images/slider/506.jpg');" href="images/slider/506.jpg"></a><a class="gallery__item" style="background-image: url('./images/slider/507.jpg');" href="images/slider/507.jpg"></a><a class="gallery__item" style="background-image: url('./images/slider/508.jpg');" href="images/slider/508.jpg"></a><a class="gallery__item" style="background-image: url('./images/slider/509.jpg');" href="images/slider/509.jpg"></a><a class="gallery__item" style="background-image: url('./images/slider/510.jpg');" href="images/slider/510.jpg"></a><a class="gallery__item" style="background-image: url('./images/slider/511.jpg');" href="images/slider/511.jpg"></a><a class="gallery__item" style="background-image: url('./images/slider/512.jpg');" href="images/slider/512.jpg"></a><a class="gallery__item" style="background-image: url('./images/slider/513.jpg');" href="images/slider/513.jpg"></a><a class="gallery__item" style="background-image: url('./images/slider/514.jpg');" href="images/slider/514.jpg"></a><a class="gallery__item" style="background-image: url('./images/slider/515.jpg');" href="images/slider/515.jpg"></a><a class="gallery__item" style="background-image: url('./images/slider/516.jpg');" href="images/slider/516.jpg"></a><a class="gallery__item" style="background-image: url('./images/slider/517.jpg');" href="images/slider/517.jpg"></a><a class="gallery__item" style="background-image: url('./images/slider/518.jpg');" href="images/slider/518.jpg"></a><a class="gallery__item" style="background-image: url('./images/slider/519.jpg');" href="images/slider/519.jpg"></a><a class="gallery__item" style="background-image: url('./images/slider/520.jpg');" href="images/slider/520.jpg"></a><a class="gallery__item" style="background-image: url('./images/slider/521.jpg');" href="images/slider/521.jpg"></a><a class="gallery__item" style="background-image: url('./images/slider/521.jpg');" href="images/slider/521.jpg"></a><a class="gallery__item" style="background-image: url('./images/slider/523.jpg');" href="images/slider/523.jpg"></a><a class="gallery__item" style="background-image: url('./images/slider/524.jpg');" href="images/slider/524.jpg"></a><a class="gallery__item" style="background-image: url('./images/slider/525.jpg');" href="images/slider/525.jpg"></a></div>
 						</div>
-						<div class="btn-inner"><a class="btn" href="#style-decor"><span style="white-space: nowrap;">Заказать за<span class="cost-btn-line"> 14.95</span><span class="cost-btn"> 9.95</span>р.</span></a></div><br>
-						<div class="information__images dstv-header" data-popup="popup_info" data-modal-text="&lt;span&gt;  Доставка писем производится по всей Беларуси!        Получатель сможет ЛИЧНО достать из почтового ящика письмо от Деда Мороза с новогодним сувениром, который мы подготовим специально для него!        Это гарантированно поднимет предновогоднее настроение не только получателю, но и всей семье!        Подарите своим близким незабываемые впечатления! &lt;/span&gt; ">Бесплатная доставка по Беларуси</div>
+						<div class="btn-inner"><a class="btn" href="#style-decor"><span style="white-space: nowrap;">Заказать за<span class="cost-btn-line"> 14.95</span><span class="cost-btn"> 9.95</span>р.</span></a></div>
+						<div class="btn-info btn-info--timer">Бесплатная доставка по Беларуси<span class="helper">?
+								<div class="helper__content">
+									<ul>
+									    <li> Письма доставляются в любую точку Беларуси! </li>
+									    <li> Доставка осуществляется Белпочтой. </li>
+									    <li> Письма доставляются в почтовый ящик получателя. </li>
+									    <li> Доставка осуществляется бесплатно («Простое письмо»). </li>
+									    <li> Также есть возможность отправить письмо «1 кслассом» за дополнительную
+									
+								</div></span></div>
 					</div>
 				</section>
 				<section class="caunt-users">
@@ -453,7 +497,6 @@
 				</div>
 			</div>
 		</div>
-		<script src="js/vendor/jquery-3.2.1.min.js"></script>
 		<!--script(src="js/vendor/slick.js")-->
 		<script src="js/vendor/owl.carousel.min.js"></script>
 		<script src="js/vendor/flipclock.js"></script>

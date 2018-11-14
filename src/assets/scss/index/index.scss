@@ -444,6 +444,15 @@
   &--timer {
     padding-top: 20px;
   }
+
+  &--dark {
+    color: #000;
+
+    .helper {
+      color: #000;
+      border-color: #000;
+    }
+  }
 }
 
 .helper {
@@ -484,12 +493,12 @@
     opacity: 0;
     bottom: 100%;
     left: 50%;
-    padding: 10px;
+    padding: 10px 6px;
     background: #d71e22;
     color: #fff;
     overflow: hidden;
     transition: .3s;
-    width: 200px;
+    width: 265px;
     border-radius: 6px;
     transform: translateY(0px) translateX(-50%);
     box-shadow: 0 7px 27px 1px rgba(0, 0, 0, 0.45098039215686275);
@@ -533,10 +542,10 @@
   }
 
   &__inner {
-    margin-bottom: 45px;
+    margin-bottom: 20px;
 
     @media screen and (max-width: 767px) {
-      margin: 0 -20px 40px -20px;
+      margin: 0 -20px 20px -20px;
     }
   }
 }
@@ -1027,6 +1036,10 @@
 .caunt-users {
   background: url("../images/caunt-bg.jpg");
   background-size: cover;
+  height: auto;
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
 
   &__inner {
     display: flex;
@@ -1055,9 +1068,14 @@
     color: #a60300;
     font-size: 34px;
     font-weight: 700;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 
     @media screen and (max-width: 767px) {
-      padding: 100px 0;
+      padding: 0;
     }
 
   }
@@ -2429,9 +2447,9 @@
 //
 
 .soc_block {
-  height: 200px;
+
   .caunt-users__inner {
-    padding-top: 75px;
+
   }
 }
 
@@ -2442,17 +2460,19 @@
 .soc_block {
 
   &_div {
-    position: relative;
-    padding-left: 5%;
     float: none;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
+    margin: 5px 0;
   }
 
   &__link {
-    display: block;
     margin: 0 5px;
     transition: .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
 
     &:hover {
@@ -2461,39 +2481,25 @@
   }
 
   &_title {
-    padding-top: 13px;
     position: relative;
     display: inline-block;
-    float: left;
+    padding-right: 20px;
   }
 }
 
 @media all and(max-width: 991px) {
   .soc_block_title {
-    padding-top: 13px;
     position: relative;
     display: block;
     float: none;
     font-size: 29px;
   }
-  .soc_block_div {
-    position: relative;
-    display: block;
-    padding-left: 0;
-    padding-top: 15px;
-    float: none;
-  }
-  .soc_block_header {
-    padding: 0 !important;
-    margin: 0 auto !important;
-    text-align: center;
-  }
+
   .soc_img {
     width: 40px !important;
   }
   .box-soc {
     max-width: none !important;
-    padding-top: 6%;
   }
   .soc_block .caunt-users__inner {
     padding-top: 0;

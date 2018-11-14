@@ -45,8 +45,6 @@ block main
                                 img.sp-thumbnail(src='images/sentence-gallery/8.jpg')
                                 img.sp-thumbnail(src='images/sentence-gallery/more-small.jpg')
 
-
-
                     .sentence__cell
                         .sentence-data
                             .sentence-data__title Что мы предлагаем:
@@ -62,7 +60,7 @@ block main
                                     | Подарить за
                                     span(class="cost-btn")  9.95
                                     |  руб.
-                                .btn-info
+                                .btn-info.btn-info--dark
                                     | Бесплатная доставка по Беларуси
                                     span.helper ?
                                         .helper__content.
@@ -91,7 +89,40 @@ block main
                 .timer
                     .timer__header До окончания акции осталось:
                     .timer__inner
-                        .clock
+                        //.clock
+                        script(src='https://e-timer.ru/js/etimer.js')
+                        script(type='text/javascript').
+                            jQuery(document).ready(function () {
+                                jQuery(".eTimer").eTimer({
+                                    etType: 0,
+                                    etDate: "31.12.2018.23.59",
+                                    etTitleText: "",
+                                    etTitleSize: 10,
+                                    etShowSign: 1,
+                                    etSep: " ",
+                                    etFontFamily: "Georgia",
+                                    etTextColor: "white",
+                                    etPaddingTB: 5,
+                                    etPaddingLR: 5,
+                                    etBackground: "transparent",
+                                    etBorderSize: 0,
+                                    etBorderRadius: 0,
+                                    etBorderColor: "#d76262",
+                                    etShadow: " 0px 0px 0px 0px #333333",
+                                    etLastUnit: 4,
+                                    etNumberFontFamily: "Impact",
+                                    etNumberSize: 22,
+                                    etNumberColor: "black",
+                                    etNumberPaddingTB: 1,
+                                    etNumberPaddingLR: 6,
+                                    etNumberBackground: "#f9fbfb",
+                                    etNumberBorderSize: 3,
+                                    etNumberBorderRadius: 4,
+                                    etNumberBorderColor: "white",
+                                    etNumberShadow: "inset 0px 0px 10px 0px transparent"
+                                });
+                            });
+                        .eTimer
                 .btn-inner
                     a(href="#style-decor").btn.btn--cost
                         | Подарить за
@@ -176,7 +207,7 @@ block main
                         .text-oform
                             .text-oform__item
                                 a.text-oform__images(rel="group" title="Текст №1" href="images/step3/11.jpg")
-                                    img(src="images/style-text_2.jpg", alt="content")
+                                    img(src="images/style-text_1.jpg", alt="content")
                                 .text-oform__name Текст №1
                             .text-oform__item
                                 a.text-oform__images(rel="group" title="Текст №2" href="images/step3/12.jpg")
@@ -184,12 +215,12 @@ block main
                                 .text-oform__name Текст №2
                             .text-oform__item
                                 a.text-oform__images(rel="group" title="Текст №3" href="images/step3/13.jpg")
-                                    img(src="images/style-text_2.jpg", alt="content")
+                                    img(src="images/style-text_3.jpg", alt="content")
                                 .text-oform__name Текст №3
                         .btn-inner
                             a(href="#").btn.btn--step.btn--disabled.text-oform__btn.js-go-to-step4 Далее
                     .page-f-decor__item
-                        form.ordering
+                        form.ordering( action="connect.php" method="post" class="ordering" id="js-validate" )
                             .grid
                                 .grid__cell
                                     .ordering-form
@@ -198,13 +229,13 @@ block main
                                             .ordering-form__item
                                                 .ordering-form__group.ordering-form__group--xs
                                                     label.ordering-form__label.ordering-form__label--required Имя
-                                                    input(class='ordering-form__input' type='text' name="name" placeholder="Ксюша")
+                                                    input(class='ordering-form__input' type='text' name="name" placeholder="Ксюша" required)
                                                 .ordering-form__group.ordering-form__group--xs
                                                     label.ordering-form__label.ordering-form__label--required Фамилия
-                                                    input(class='ordering-form__input' type='text' placeholder="Иванова")
+                                                    input(class='ordering-form__input' type='text' placeholder="Иванова" required)
                                                 .ordering-form__group.ordering-form__group--xs
                                                     label.ordering-form__label.ordering-form__label--required Возраст получателя
-                                                    input(class='ordering-form__input' type='text' placeholder="4 года")
+                                                    input(class='ordering-form__input' type='text' placeholder="4 года" required)
                                                 .ordering-form__group.ordering-form__group--xs
                                                     label.ordering-form__label Кому передать привет?
                                                     input(class='ordering-form__input' type='text' placeholder="Сестре маше")
@@ -213,13 +244,13 @@ block main
                                             .ordering-form__item
                                                 .ordering-form__group
                                                     label.ordering-form__label.ordering-form__label--required Город:
-                                                    input(class='ordering-form__input' type='text' placeholder="Минск")
+                                                    input(class='ordering-form__input' type='text' placeholder="Минск" required)
                                                 .ordering-form__group
                                                     label.ordering-form__label.ordering-form__label--required Адрес:
-                                                    input(class='ordering-form__input' type='text' placeholder="ул. Пушкина, д. 5, кв.56")
+                                                    input(class='ordering-form__input' type='text' placeholder="ул. Пушкина, д. 5, кв.56" required)
                                                 .ordering-form__group.ordering-form__group--small
                                                     label.ordering-form__label.ordering-form__label--required Индекс:
-                                                    input(class='ordering-form__input' type='text' placeholder="220089")
+                                                    input(class='ordering-form__input' type='text' placeholder="220089" required)
 
                                             .btn-inner.btn-inner--left
                                                 input(class='ordering-form__check' type='checkbox', id='check2')
@@ -235,13 +266,13 @@ block main
                                             .ordering-form__item
                                                 .ordering-form__group
                                                     label.ordering-form__label.ordering-form__label--required Имя:
-                                                    input(class='ordering-form__input' type='text' placeholder="Ваше имя")
+                                                    input(class='ordering-form__input' type='text' placeholder="Ваше имя" required)
                                                 .ordering-form__group.ordering-form__group--big
                                                     label.ordering-form__label.ordering-form__label--required Телефон:
-                                                    input(class='ordering-form__input' type='text'  placeholder="+375-хх-xxx-xx-xx")
+                                                    input(class='ordering-form__input' name="phone" type='text'  placeholder="+375-хх-xxx-xx-xx" required)
                                                 .ordering-form__group.ordering-form__group--textarea
                                                     label.ordering-form__label.ordering-form__label--required Комментарий:
-                                                    textarea(placeholder="Введите комментраий к письму").ordering-form__textarea
+                                                    textarea(placeholder="Введите комментраий к письму" required).ordering-form__textarea
                                     .ordering-footer.ordering-footer--no-pt.sm-hidden
                                         .ordering-footer__inner
                                             .ordering-footer__row В случае возникновения трудностей с оформлением заказа наберите: <br> <a class='ordering__help-tel' href='tel:+375298882019'>‎ +375 (29) 888-2019</a>
@@ -272,12 +303,12 @@ block main
                                             input(class='nominal-certificate__check js--i-agree' type='checkbox' checked, id='check3')
                                             label(for="check3").nominal-certificate__check-label Я согласен с
                                                 a(href="publichnaya-oferta-pismo-deda.by.docx").nominal-certificate__link-offert условиями оферты
-                                        input(type="submit" value="Оплатить").btn.btn--ordering.btn--form
+                                        input(type="submit" value="Оплатить").btn.btn--ordering.btn--form.ordering-form__group--success
                                     .ordering-footer
                                         .ordering-footer__inner
                                             .ordering-footer__row.ordering-footer__row--center
                                                 div Вы будете перенаправлены на
-                                                img(src="images/pay9.png", alt='assist').ordering-footer__img
+                                                img(src="images/assist.png", alt='assist').ordering-footer__img
                                                 img(src="images/pay8.png", alt='расчет').ordering-footer__img
                                             .ordering-footer__row.sm-visible В случае возникновения трудностей с оформлением заказа наберите: <br> <a class='ordering__help-tel' href='tel:+375298882019'>‎ +375 (29) 888-2019</a>
     section.section.section--white.information
@@ -350,14 +381,31 @@ block main
             .gallery#gallery
                 .gallery__header Галерея
                 .gallery__inner.owl-carousel
-                    a.gallery__item(style="background-image: url('./images/slider/IMG_1763.jpg');", href='images/slider/IMG_1763.jpg')
-                    a.gallery__item(style="background-image: url('./images/slider/IMG_1784.jpg');", href='images/slider/IMG_1784.jpg')
-                    a.gallery__item(style="background-image: url('./images/slider/IMG_1795.jpg');", href='images/slider/IMG_1795.jpg')
-                    a.gallery__item(style="background-image: url('./images/slider/IMG_1804.jpg');", href='images/slider/IMG_1804.jpg')
-                    a.gallery__item(style="background-image: url('./images/slider/IMG_1839.jpg');", href='images/slider/IMG_1839.jpg')
-                    a.gallery__item(style="background-image: url('./images/slider/IMG_1808.jpg');", href='images/slider/IMG_1808.jpg')
-                    a.gallery__item(style="background-image: url('./images/slider/IMG_1812.jpg');", href='images/slider/IMG_1812.jpg')
-                    a.gallery__item(style="background-image: url('./images/slider/IMG_1822.jpg');", href='images/slider/IMG_1822.jpg')
+                    a.gallery__item(style="background-image: url('./images/slider/501.jpg');", href='images/slider/501.jpg')
+                    a.gallery__item(style="background-image: url('./images/slider/502.jpg');", href='images/slider/502.jpg')
+                    a.gallery__item(style="background-image: url('./images/slider/503.jpg');", href='images/slider/503.jpg')
+                    a.gallery__item(style="background-image: url('./images/slider/504.jpg');", href='images/slider/504.jpg')
+                    a.gallery__item(style="background-image: url('./images/slider/505.jpg');", href='images/slider/505.jpg')
+                    a.gallery__item(style="background-image: url('./images/slider/506.jpg');", href='images/slider/506.jpg')
+                    a.gallery__item(style="background-image: url('./images/slider/507.jpg');", href='images/slider/507.jpg')
+                    a.gallery__item(style="background-image: url('./images/slider/508.jpg');", href='images/slider/508.jpg')
+                    a.gallery__item(style="background-image: url('./images/slider/509.jpg');", href='images/slider/509.jpg')
+                    a.gallery__item(style="background-image: url('./images/slider/510.jpg');", href='images/slider/510.jpg')
+                    a.gallery__item(style="background-image: url('./images/slider/511.jpg');", href='images/slider/511.jpg')
+                    a.gallery__item(style="background-image: url('./images/slider/512.jpg');", href='images/slider/512.jpg')
+                    a.gallery__item(style="background-image: url('./images/slider/513.jpg');", href='images/slider/513.jpg')
+                    a.gallery__item(style="background-image: url('./images/slider/514.jpg');", href='images/slider/514.jpg')
+                    a.gallery__item(style="background-image: url('./images/slider/515.jpg');", href='images/slider/515.jpg')
+                    a.gallery__item(style="background-image: url('./images/slider/516.jpg');", href='images/slider/516.jpg')
+                    a.gallery__item(style="background-image: url('./images/slider/517.jpg');", href='images/slider/517.jpg')
+                    a.gallery__item(style="background-image: url('./images/slider/518.jpg');", href='images/slider/518.jpg')
+                    a.gallery__item(style="background-image: url('./images/slider/519.jpg');", href='images/slider/519.jpg')
+                    a.gallery__item(style="background-image: url('./images/slider/520.jpg');", href='images/slider/520.jpg')
+                    a.gallery__item(style="background-image: url('./images/slider/521.jpg');", href='images/slider/521.jpg')
+                    a.gallery__item(style="background-image: url('./images/slider/521.jpg');", href='images/slider/521.jpg')
+                    a.gallery__item(style="background-image: url('./images/slider/523.jpg');", href='images/slider/523.jpg')
+                    a.gallery__item(style="background-image: url('./images/slider/524.jpg');", href='images/slider/524.jpg')
+                    a.gallery__item(style="background-image: url('./images/slider/525.jpg');", href='images/slider/525.jpg')
             .btn-inner
                 a.btn(href='#style-decor')
                     span(style='white-space: nowrap;')
@@ -365,12 +413,16 @@ block main
                         span.cost-btn-line  14.95
                         span.cost-btn  9.95
                         | р.
-            br
-            .information__images.dstv-header(data-popup='popup_info', data-modal-text='<span>  Доставка писем производится по всей Беларуси!\
-        Получатель сможет ЛИЧНО достать из почтового ящика письмо от Деда Мороза с новогодним сувениром, который мы подготовим специально для него!\
-        Это гарантированно поднимет предновогоднее настроение не только получателю, но и всей семье!\
-        Подарите своим близким незабываемые впечатления! </span> ')
+            .btn-info.btn-info--timer
                 | Бесплатная доставка по Беларуси
+                span.helper ?
+                    .helper__content.
+                        <ul>
+                            <li> Письма доставляются в любую точку Беларуси! </li>
+                            <li> Доставка осуществляется Белпочтой. </li>
+                            <li> Письма доставляются в почтовый ящик получателя. </li>
+                            <li> Доставка осуществляется бесплатно («Простое письмо»). </li>
+                            <li> Также есть возможность отправить письмо «1 кслассом» за дополнительную
 
     section.caunt-users
         .box
