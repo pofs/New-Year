@@ -108,10 +108,12 @@ function initGallery() {
         arrows: true,
         buttons: false,
         fullScreen: true,
-        shuffle: true,
+        shuffle: false,
         thumbnailArrows: true,
         autoplay: false
     });
+    $(".slider-pro").removeClass("slider-pro--not-init")
+
 }
 
 function opentabs1() {
@@ -257,6 +259,10 @@ function activeAvatar() {
     $('.mail-for__person').removeClass('mail-for__person--active');
     $('.mail-for__person').addClass('mail-for__person--opacity');
     $(this).closest('.mail-for__person').addClass('mail-for__person--active');
+
+    var el = '.mail-for__btn';
+    var top = $(el).offset().top;
+    $('body,html').animate({scrollTop: top - 300}, 1500);
 }
 
 function activeStyle() {

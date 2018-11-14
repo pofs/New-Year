@@ -20,7 +20,7 @@ html(lang='ru-RU')
         meta(name='yandex-verification' content='00d49ac74fbbf501')
         meta(name='google-site-verification' content='0O_kzRYcygKFDUqJT88xlPfqAPqdqrjj9B4lZhTQSiE')
         link(rel='shortcut icon' href='images/favicon/favicon.png' type='image/png')
-        link(rel='stylesheet', href= dir + 'css/styles.min.css?v2.0')
+        link(rel='stylesheet', href= dir + 'css/styles.min.css?v2.1')
         script(type='text/javascript').
             (window.Image ? (new Image()) : document.createElement('img')).src = 'https://vk.com/rtrg?p=VK-RTRG-191474-1oQai';
 
@@ -50,8 +50,16 @@ html(lang='ru-RU')
                                     |  руб.
                                 .btn-info
                                     | Бесплатная доставка по Беларуси
-                                    span.helper(data-content="Описание появляющееся по наведению") ?
-                            img(src='./images/mail4.gif').post-image
+                                    span.helper ?
+                                        .helper__content.
+                                            <ul>
+                                                <li> Письма доставляются в любую точку Беларуси! </li>
+                                                <li> Доставка осуществляется Белпочтой. </li>
+                                                <li> Письма доставляются в почтовый ящик получателя. </li>
+                                                <li> Доставка осуществляется бесплатно («Простое письмо»). </li>
+                                                <li> Также есть возможность отправить письмо «1 кслассом» за дополнительную оплату.</li></ul>
+                            .post-image
+                                img(src='./images/mail4.gif').post-image__img
             main.main
                 block main
             footer.footer
@@ -250,4 +258,4 @@ html(lang='ru-RU')
         // //Rating@Mail.ru counter
 
         block script
-        script(src="js/app.min.js")
+        script(src="js/app.min.js?v2.1")

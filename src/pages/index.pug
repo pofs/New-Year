@@ -13,7 +13,7 @@ block main
             .box
                 .sentence__grid
                     .sentence__cell
-                        .sentence-gallery.slider-pro
+                        .sentence-gallery.slider-pro.slider-pro--not-init
                             .sp-slides
                                 .sp-slide
                                     img.sp-image(data-src='images/sentence-gallery/1.jpg')
@@ -31,7 +31,9 @@ block main
                                     img.sp-image(data-src='images/sentence-gallery/7.jpg')
                                 .sp-slide
                                     img.sp-image(data-src='images/sentence-gallery/8.jpg')
-
+                                .sp-slide
+                                    a(href="#gallery")
+                                        img.sp-image(data-src='images/sentence-gallery/more-big.jpg')
                             .sp-thumbnails
                                 img.sp-thumbnail(src='images/sentence-gallery/1.jpg')
                                 img.sp-thumbnail(src='images/sentence-gallery/2.jpg')
@@ -41,6 +43,7 @@ block main
                                 img.sp-thumbnail(src='images/sentence-gallery/6.jpg')
                                 img.sp-thumbnail(src='images/sentence-gallery/7.jpg')
                                 img.sp-thumbnail(src='images/sentence-gallery/8.jpg')
+                                img.sp-thumbnail(src='images/sentence-gallery/more-small.jpg')
 
 
 
@@ -61,7 +64,14 @@ block main
                                     |  руб.
                                 .btn-info
                                     | Бесплатная доставка по Беларуси
-                                    span.helper(data-content="Описание появляющееся по наведению") ?
+                                    span.helper ?
+                                        .helper__content.
+                                            <ul>
+                                                <li> Письма доставляются в любую точку Беларуси! </li>
+                                                <li> Доставка осуществляется Белпочтой. </li>
+                                                <li> Письма доставляются в почтовый ящик получателя. </li>
+                                                <li> Доставка осуществляется бесплатно («Простое письмо»). </li>
+                                                <li> Также есть возможность отправить письмо «1 кслассом» за дополнительную оплату.</li></ul>
     section.b-video
         .b-video__inner
             .b-video-data
@@ -89,7 +99,14 @@ block main
                         |  руб.
                     .btn-info.btn-info--timer
                         | Бесплатная доставка по Беларуси
-                        span.helper(data-content="Описание появляющееся по наведению") ?
+                        span.helper ?
+                            .helper__content.
+                                <ul>
+                                    <li> Письма доставляются в любую точку Беларуси! </li>
+                                    <li> Доставка осуществляется Белпочтой. </li>
+                                    <li> Письма доставляются в почтовый ящик получателя. </li>
+                                    <li> Доставка осуществляется бесплатно («Простое письмо»). </li>
+                                    <li> Также есть возможность отправить письмо «1 кслассом» за дополнительную
     section.section.style-decor#style-decor
         .box.box--steps
             .heading Подарить письмо:
@@ -203,11 +220,16 @@ block main
                                                 .ordering-form__group.ordering-form__group--small
                                                     label.ordering-form__label.ordering-form__label--required Индекс:
                                                     input(class='ordering-form__input' type='text' placeholder="220089")
+
                                             .btn-inner.btn-inner--left
-                                                    input(class='ordering-form__check' type='checkbox', id='check2')
-                                                    label(for="check2").ordering-form__check-label
-                                                       | Отправить 1 классом с трек номером <strong> +1,5 руб. </strong>
-                                                       i.helper.helper--dark(data-content="Описание появляющееся по наведению") ?
+                                                input(class='ordering-form__check' type='checkbox', id='check2')
+                                                label(for="check2").ordering-form__check-label
+                                                    | Отправить «1 классом» с трек номером <strong> +1,5 руб. </strong>
+                                                    i.helper.helper--dark ?
+                                                        .helper__content.
+                                                            <ul>
+                                                                <li> «1 класс» – это отправление письма в приоритетном порядке с сервисом «слежения». </li>
+                                                                <li> При заказе письма, вы можете выбрать отправку первым классом, вы получите трек-номер по SMS, по которому сможете отслеживать движение письма с момента отправки и до момента доставки его в почтовый ящик. </li>
                                         .ordering-form__row
                                             .ordering-form__name Как с вами связаться
                                             .ordering-form__item
@@ -325,7 +347,7 @@ block main
                             img.soc_img(src='/images/f.png', alt='soc')
     section.section.section--white.information
         .box
-            .gallery
+            .gallery#gallery
                 .gallery__header Галерея
                 .gallery__inner.owl-carousel
                     a.gallery__item(style="background-image: url('./images/slider/IMG_1763.jpg');", href='images/slider/IMG_1763.jpg')
